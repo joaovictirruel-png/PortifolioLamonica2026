@@ -463,6 +463,14 @@ a {
   padding: 4px 10px;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(0, 229, 255, 0.15);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.meta-tag svg,
+.email-display-card svg {
+  flex-shrink: 0;
 }
 
 .sobre-grid {
@@ -859,6 +867,14 @@ a {
   font-family: var(--font-mono);
   font-size: 0.92rem;
   transition: var(--transition-normal);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.email-address-text {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .email-display-card:hover {
@@ -974,6 +990,38 @@ a {
   }
   
   .contato-box {
-    padding: 40px 24px;
+    padding: 40px 20px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .email-display-card {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 16px;
+    font-size: clamp(0.75rem, 3.2vw, 0.88rem);
+    text-align: center;
+  }
+
+  .email-copy-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .meta-tag.meta-link {
+    font-size: clamp(0.68rem, 2.8vw, 0.78rem);
+    padding: 4px 8px;
+    white-space: normal;
+    text-align: left;
+  }
+  
+  .email-display-card {
+    font-size: clamp(0.7rem, 3vw, 0.8rem);
+    padding: 12px 10px;
   }
 }

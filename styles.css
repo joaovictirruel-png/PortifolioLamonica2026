@@ -432,6 +432,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .presentation-name {
@@ -450,6 +452,8 @@ a {
   gap: 12px;
   margin-top: 8px;
   flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .meta-tag {
@@ -465,7 +469,7 @@ a {
   border: 1px solid rgba(0, 229, 255, 0.15);
   max-width: 100%;
   overflow-wrap: anywhere;
-  word-break: break-word;
+  word-break: break-all;
 }
 
 .meta-tag svg,
@@ -982,6 +986,13 @@ a {
   .mobile-toggle {
     display: flex;
   }
+
+  .presentation-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+  }
   
   .footer-container {
     flex-direction: column;
@@ -1001,8 +1012,8 @@ a {
   .email-display-card {
     width: 100%;
     justify-content: center;
-    padding: 14px 16px;
-    font-size: clamp(0.75rem, 3.2vw, 0.88rem);
+    padding: 12px 14px;
+    font-size: clamp(0.7rem, 2.8vw, 0.82rem);
     text-align: center;
   }
 
@@ -1013,15 +1024,19 @@ a {
 }
 
 @media (max-width: 480px) {
-  .meta-tag.meta-link {
-    font-size: clamp(0.68rem, 2.8vw, 0.78rem);
-    padding: 4px 8px;
-    white-space: normal;
-    text-align: left;
+  .presentation-card {
+    padding: 16px 12px;
+  }
+
+  .meta-tag {
+    font-size: clamp(0.6rem, 2.5vw, 0.72rem);
+    padding: 4px 6px;
+    word-break: break-all;
+    overflow-wrap: anywhere;
   }
   
   .email-display-card {
-    font-size: clamp(0.7rem, 3vw, 0.8rem);
-    padding: 12px 10px;
+    font-size: clamp(0.65rem, 2.6vw, 0.75rem);
+    padding: 10px 8px;
   }
 }
